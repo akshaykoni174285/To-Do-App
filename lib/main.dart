@@ -1,7 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:to_do_application/screens/tasks_screen.dart';
+import 'package:to_do_application/screens/task_screen.dart';
 
 void main() {
   runApp(const MyApp());

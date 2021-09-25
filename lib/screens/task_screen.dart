@@ -1,7 +1,6 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:to_do_application/widgets/Task_List.dart';
+import 'Bottom_Screen.dart';
 
 class Task_Screen extends StatelessWidget {
   const Task_Screen({Key? key}) : super(key: key);
@@ -9,7 +8,15 @@ class Task_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
+        onPressed: () {
+          showModalBottomSheet(
+              context: context, builder: (context) => Bottom_Screen());
+        },
+        child: Icon(Icons.add),
+      ),
+      backgroundColor: Colors.lightBlueAccent,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
